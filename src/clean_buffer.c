@@ -58,5 +58,5 @@ char **get_cleaned(char *buffer, char limit)
             j++;
         for (; buffer[i] > 32 && buffer[i] != '\0'; i++);
     }
-    return (str_to_clean(buffer, j));
+    return (str_to_clean(buffer, j, limit));
 }

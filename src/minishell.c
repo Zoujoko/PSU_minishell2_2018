@@ -66,7 +66,7 @@ void which_command(shell_t *mysh)
         for (; mysh->buffer[i] != ';' && mysh->buffer[i] != '\0'; i++);
         save = mysh->buffer[i];
         mysh->buffer[i] = '\0';
-        mysh->command = get_cleaned(mysh->buffer + j);
+        mysh->command = get_cleaned(mysh->buffer + j, ' ');
         if (find_redirections(mysh) == 0 && test_buffer(mysh) == 0)
             prompt(mysh);
         mysh->buffer[i] = save;

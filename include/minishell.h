@@ -42,7 +42,7 @@ void env_command(shell_t *mysh);
 int setenv_command(shell_t *mysh);
 int unsetenv_command(shell_t *mysh);
 int check_inside_file(shell_t *mysh);
-char **get_cleaned(char *buffer);
+char **get_cleaned(char *buffer, char limit);
 int find_size(char **tab);
 int my_isalpha(char *newenv);
 void exit_command(shell_t *mysh);
